@@ -1,0 +1,43 @@
+<nav class="navbar navbar-default weatherNav">
+  <div class="container-fluid wContainer">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Weather</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <form class="navbar-form navbar-left" (ngSubmit)="onSubmit(input.value)">
+        <div class="form-group">
+          <!-- <input type="text" placeholder="Enter city name" id="city" class="form-control" required #input> -->
+          <ng2-completer name= "color" [(ngModel)]="searchStr" [datasource]="dataService" [minSearchLength]="0" placeholder="Enter city name" #input></ng2-completer>
+        </div>
+        <button type="submit" class="btn btn-default">Get</button>
+      </form>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<section>
+
+  <div class="weatherContainer" *ngIf="weatherData">
+    <div class="weatherLeft">
+      <h1>{{weatherData.name}}</h1>
+      <p>{{weatherData.main.temp}} <sup>o</sup>C</p>
+    </div>
+    <div class="weatherRight">
+      <p>{{weatherData.weather[0].main}}</p>
+      <p>Humidity: {{weatherData.main.humidity}} %</p>
+      <p>Pressure: {{weatherData.main.pressure}} hPa</p>
+    </div>
+  </div>
+
+    <weathers [WeatherForecastList]="weatherForeCastData" class="weathers"></weathers>
+</section>

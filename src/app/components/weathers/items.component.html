@@ -1,0 +1,14 @@
+<div class="weather-item">
+    <div >
+      <div class="wlleft">
+        <h2 style="text-transform: uppercase;"> {{ weather.weather[0].main }}</h2>
+        <span>{{ weather.main.temp }} <sup>o</sup>C</span>
+      </div>
+      <div class="wlright">
+        <h3 > {{ weather.weather[0].description }}</h3>
+        <p >Wind speed : {{ weather.wind.speed }} m/sec</p>
+
+        <p>{{ weather.dt_txt}}</p>
+      </div>
+      </div>
+</div>

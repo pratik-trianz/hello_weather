@@ -1,0 +1,21 @@
+.weatherNav{
+  height: 80px;
+}
+.wContainer{
+  margin-top: 1%;
+}
+.weatherContainer{
+  border: 1px solid;
+  width: 45%;
+  padding: 4%;
+  border-radius: 14px;
+  margin-left: 15px;
+  float: left;
+}
+.weatherLeft{
+  float: left;
+      margin: 0px 37px 0 54px;
+}
+.weathers{
+  float: right;
+}
