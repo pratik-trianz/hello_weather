@@ -8,3 +8,6 @@ h1 {
     border-radius: 5px;
     line-height: 2;
 }
+.pac-container{
+      width: 400px !important;
+}
