@@ -1,14 +1,9 @@
 <div class="weather-item">
-    <div >
-      <div class="wlleft">
-        <h2 style="text-transform: uppercase;"> {{ weather.weather[0].main }}</h2>
-        <span>{{ weather.main.temp }} <sup>o</sup>C</span>
+    <div class="foreCastItem clearfix col-md-12">
+        <div class="leftFloat cloudImage col-md-2"><img class="forecastImg" src="../../../../images/weather_icons/1495477396_weather-02.png"></div>
+        <div class="leftFloat foreTemp col-md-3"><span>{{ weather.main.temp }} <sup>o</sup>C</span></div>
+        <div class="leftFloat foreWind col-md-2"><span >{{ weather.wind.speed }} m/sec</span></div>
+        <div class="leftFloat forePressure col-md-2"><span>{{ weather.main.pressure }}</span></div>
+        <div class="leftFloat foreDateTime col-md-3"><span>{{ weather.dt_txt}}</span></div>
       </div>
-      <div class="wlright">
-        <h3 > {{ weather.weather[0].description }}</h3>
-        <p >Wind speed : {{ weather.wind.speed }} m/sec</p>
-
-        <p>{{ weather.dt_txt}}</p>
-      </div>
-      </div>
-</div>
+  </div>

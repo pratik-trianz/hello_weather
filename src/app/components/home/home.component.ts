@@ -58,7 +58,7 @@ ngOnInit() {
            if (place.geometry === undefined || place.geometry === null) {
              return;
            }
-           
+
          });
        });
      });
@@ -82,5 +82,8 @@ ngOnInit() {
                error =>  this.errorMessage = <any>error,
              );
 
+  }
+  getDateTime(timeinMS:number){
+    return Date();
   }
 }

@@ -1,12 +1,73 @@
 .weather-item{
-  border: 1px solid;
-    padding: 35px;
-    border-radius: 8px;
-    width: 600px;
-/* margin-right: 39px; */
-margin: 0px 39px 5px 0;
+  /*border: 1px solid #f0f0f0;*/
+      /*padding: 31px;*/
+      /*border-radius: 8px;*/
+      /*width: 580px;*/
+      /*margin: 0px 39px 5px 0;*/
+      clear: both;
 }
 .wlleft{
   float: left;
   margin-right: 82px;
+}
+.forecastImg{
+  width: 65px;
+      /*margin-top: -27px;*/
+}
+.leftFloat{
+  float: left;
+  padding: 0 6px 0 6px;
+}
+.cloudImage{
+  /*background: red;*/
+/*margin-top: -31px;*/
+height: 61px;
+}
+.foreTemp{
+  font-size: 25px;
+background: #f0f0f0;
+/*margin-top: -31px;*/
+color: #525252;
+height: 61px;
+}
+.foreTemp span{
+  display: block;
+    margin-top: 12px;
+}
+.foreWind{
+  font-size: 17px;
+color: #8f8f8f;
+background: #f0f0f0;
+height: 62px;
+/*margin-top: -31px;*/
+}
+.foreWind span{
+  margin-top: 19px;
+display: block;
+}
+.forePressure{
+  font-size: 17px;
+  color: #8f8f8f;
+  background: #f0f0f0;
+  height: 62px;
+  /*margin-top: -31px;*/
+}
+.forePressure span{
+  display: block;
+margin-top: 20px;
+}
+.foreDateTime{
+  font-size: 15px;
+      height: 62px;
+      /*margin-top: -31px;*/
+      background: #f0f0f0;
+}
+.foreDateTime span{
+  display: block;
+margin-top: 17px;
+}
+.foreCastItem {
+  border: 1px solid #f2e2d3;
+background: #f0f0f0;
+    margin: 1px 1px 0 0;
 }

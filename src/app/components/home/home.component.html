@@ -1,47 +1,63 @@
-<nav class="navbar navbar-default weatherNav">
-  <div class="container-fluid wContainer">
+<nav class="navbar navbar-default navbar-fixed-top weatherNav">
+  <div class="container wContainer">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
+    <div class="navbar-header weatherHeader">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Weather</a>
+      <div class="weatherBrand">
+        <a class="navbar-brand helloWeather" href="#"><span class="helloWord">Hello</span> Weather</a>
+      </div>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-      <form class="navbar-form navbar-left" (ngSubmit)="onSubmit(search.value)">
+    <div class="collapse navbar-collapse locationForm" id="bs-example-navbar-collapse-1">
+      <form class="navbar-form" (ngSubmit)="onSubmit(search.value)">
         <div class="form-group">
           <!-- <input type="text" placeholder="Enter city name" id="city" class="form-control" required #input> -->
           <!-- <ng2-completer name= "color" [(ngModel)]="searchStr" [datasource]="dataService" [minSearchLength]="0" placeholder="Enter city name" #input></ng2-completer> -->
-<input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+            <input placeholder="search for location" class="searchInput" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
         </div>
-        <button type="submit" class="btn btn-default">Get</button>
+            <span class="location_icon"></span>
+            <button style="display:none"type="submit" class="btn btn-default">Get</button>
       </form>
       <!-- <div class="form-group">
         <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
       </div> -->
-
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<section>
 
-  <div class="weatherContainer" *ngIf="weatherData">
-    <div class="weatherLeft">
-      <h1>{{weatherData.name}}</h1>
-      <p>{{weatherData.main.temp}} <sup>o</sup>C</p>
+<div class="container">
+
+  <div class="weatherContainer col-md-12" *ngIf="weatherData">
+
+    <div class="weatherLeft col-md-4">
+      <div class="weatherImgSection">
+          <img class="wImg" src="../../../images/weather_icons/1495477396_weather-02.png">
+      </div>
+      <div class="weatherDataSection">
+        <span class="dateAndTime">{{getDateTime(weatherData.dt)}}</span>
+        <h1 class="wTemp wdFontcolor">{{weatherData.main.temp}} <sup>o</sup>C</h1>
+        <p class="wMain wdFontcolor">{{weatherData.weather[0].main}}</p>
+        <p class="wHumidity wdFontcolor">{{weatherData.main.humidity}}% Humidity</p>
+        <p class="wPressure wdFontcolor">{{weatherData.main.pressure}} hPa Pressure</p>
+      </div>
     </div>
-    <div class="weatherRight">
-      <p>{{weatherData.weather[0].main}}</p>
-      <p>Humidity: {{weatherData.main.humidity}} %</p>
-      <p>Pressure: {{weatherData.main.pressure}} hPa</p>
+
+    <div class="weatherRight col-md-8">
+
+      <div class="forecastHeader">Forecast</div>
+      <weathers [WeatherForecastList]="weatherForeCastData" class="weathers col-md-12"></weathers>
+
     </div>
   </div>
-
-    <weathers [WeatherForecastList]="weatherForeCastData" class="weathers"></weathers>
-</section>
+</div>
+<footer class="weatherFooter">
+  <div class="container">
+    <p class="footerTxt">Powered by <a>openweathermap.org</a><p>
+  </div>
+</footer>

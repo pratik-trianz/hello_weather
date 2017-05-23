@@ -1,21 +1,96 @@
-.weatherNav{
-  height: 80px;
-}
 .wContainer{
   margin-top: 1%;
 }
+.weatherNav{
+  height: 80px;
+  background-color: #24a2c6;
+}
+.weatherHeader{
+  margin-left: 30px;
+
+}
+.helloWeather{
+color: #fff;
+}
+.helloWord{
+  background: #ec8824;
+      padding: 5px;
+      border: 1px solid #ec8824;
+      border-radius: 6px;
+}
+.wImg{
+  /*margin-top: -87px;*/
+      width: 100%;
+}
 .weatherContainer{
-  border: 1px solid;
-  width: 45%;
-  padding: 4%;
-  border-radius: 14px;
-  margin-left: 15px;
+  /*border: 1px solid;*/
+  /* width: 45%; */
+  /* padding: 4%; */
+  /*border-radius: 14px;*/
+  /* margin-left: 15px; */
   float: left;
+  margin-top: 100px;
+  margin-bottom: 30px;
 }
 .weatherLeft{
   float: left;
-      margin: 0px 37px 0 54px;
+  text-align: center;
+      /*margin: 0px 37px 0 54px;*/
 }
 .weathers{
+  /*float: right;*/
+      margin-top: 7px;
+}
+.locationForm{
   float: right;
+}
+.wdFontcolor{
+  color: #1d87a7;
+  font-weight: 600;
+}
+.weatherDataSection{
+  /*margin-top: -85px;*/
+}
+.wTemp{
+      font-size: 45px;
+}
+.location_icon{
+  background: url(../../../images/location.png);
+      /* display: block; */
+       width: 25px;
+      height: 41px;
+      display: block;
+      /* z-index: 9999999999; */
+      background-size: 18px;
+      position: relative;
+      top: -31px;
+      background-repeat: no-repeat;
+      right: -172px;
+}
+.dateAndTime{
+    color: #989898;
+    font-size: 10px;
+}
+.weatherRight{
+  float: right;
+}
+.forecastHeader{
+    font-size: 28px;
+    color: #047da0;
+    border-bottom: 4px solid #ec8824;
+}
+.searchInput{
+  padding-right: 20px;
+}
+.weatherFooter{
+  position: fixed;
+bottom: 0;
+height: 5%;
+background: #000;
+width: 100%;
+}
+.footerTxt{
+  color: #636363;
+  text-align: center;
+  margin-top: 9px;
 }
