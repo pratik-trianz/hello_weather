@@ -20,6 +20,7 @@
           <!-- <input type="text" placeholder="Enter city name" id="city" class="form-control" required #input> -->
           <!-- <ng2-completer name= "color" [(ngModel)]="searchStr" [datasource]="dataService" [minSearchLength]="0" placeholder="Enter city name" #input></ng2-completer> -->
             <input placeholder="search for location" class="searchInput" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+  <!-- <input placeholder="search for location" class="searchInput" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control"> -->
         </div>
             <span class="location_icon"></span>
             <button style="display:none"type="submit" class="btn btn-default">Get</button>
@@ -38,7 +39,7 @@
     <div class="weatherLeft col-md-4">
       <div class="weatherImgSection">
           <!-- <img class="wImg" src="../../../images/weather_icons/1495477396_weather-02.png"> -->
-          <img class="wImg" src="../../../images/weather_icons/icons/{{weatherData.weather[0].main}}.png">
+          <img class="wImg" src="../../../images/weather_icons/icons/{{weatherData.weather[0].main}}.gif">
       </div>
       <div class="weatherDataSection">
         <span class="dateAndTime">{{getDateTime(weatherData.dt)}}</span>
