@@ -18,7 +18,7 @@
       <form class="navbar-form" (ngSubmit)="onSubmit(input.value)">
         <div class="form-group">
           <!-- <input type="text" placeholder="Enter city name" id="city" class="form-control" required #input> -->
-          <ng2-completer name= "color" [(ngModel)]="searchStr" [datasource]="dataService" [minSearchLength]="0" placeholder="Enter city name" (keyup)="onType(input.value)" #input></ng2-completer>
+          <ng2-completer name= "color" [(ngModel)]="searchStr" [datasource]="dataService" [minSearchLength]="0" placeholder="Enter city name" (keyup)="onType(input.value)"(change)="onSubmit(input.value)"  #input></ng2-completer>
             <!-- <input placeholder="search for location" class="searchInput" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl"> -->
             <!-- <input placeholder="search for location" class="searchInput" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" (keyup)="onType(input.value)" #input> -->
         </div>
