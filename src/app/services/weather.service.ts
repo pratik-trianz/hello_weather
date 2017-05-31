@@ -18,6 +18,17 @@ export class WeatherService {
     .catch(this.handleExcep);
   }
 
+  getCitiesByName(city:string):Observable<any[]>{
+    return this.http.get('http://localhost:4200/cities',{
+        params: {
+            cityname: city
+        }
+      })
+        .map(response => response.json())
+        .catch(this.handleExcep);
+
+  }
+
   getWeather(city:string): Observable<any[]>{
     return this.http.get(this.baseUrl+'weather?q='+ city +'&appid='+ APPID +'&units=metric')
     .map(response => response.json())
