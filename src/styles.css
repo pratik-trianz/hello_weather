@@ -17,3 +17,6 @@ body{
 .pac-container{
   z-index: 9999
 }
+.completer-input{
+  padding-left: 10px;
+}

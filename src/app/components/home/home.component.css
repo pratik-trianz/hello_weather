@@ -56,14 +56,14 @@ color: #fff;
 }
 .location_icon{
   background: url(../../../images/location.png);
-    width: 25px;
-    height: 41px;
-    display: block;
-    background-size: 18px;
-    position: relative;
-    top: -30px;
-    background-repeat: no-repeat;
-    right: -179px;
+      width: 25px;
+      height: 41px;
+      display: block;
+      background-size: 18px;
+      position: absolute;
+      top: 3px;
+      background-repeat: no-repeat;
+      right: -27px;
 }
 .dateAndTime{
     color: #989898;
@@ -91,4 +91,7 @@ width: 100%;
   color: #636363;
   text-align: center;
   margin-top: 9px;
+}
+.form-group.search-input {
+    position: relative;
 }
