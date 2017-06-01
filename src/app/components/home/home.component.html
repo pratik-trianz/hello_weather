@@ -43,6 +43,7 @@
           <img class="wImg" src="../../../images/weather_icons/icons/{{weatherData.weather[0].main}}.gif">
       </div>
       <div class="weatherDataSection">
+        <h2 class="place">{{weatherData.name}}</h2>
         <span class="dateAndTime">{{getDateTime(weatherData.dt)}}</span>
         <h1 class="wTemp wdFontcolor">{{weatherData.main.temp}} <sup>o</sup>C</h1>
         <p class="wMain wdFontcolor">{{weatherData.weather[0].main}}</p>

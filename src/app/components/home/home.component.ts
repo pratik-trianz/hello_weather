@@ -62,6 +62,25 @@ ngOnInit() {
   //        });
   //      });
   //    });
+  this.getPosition()
+}
+
+  getPosition(){
+
+    if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(this.showPosition.bind(this));
+
+        } else {
+            console.log("Geolocation is not supported by this browser.");
+        }
+}
+
+  showPosition(position:any) {
+    var lon = position.coords.longitude;
+    var lat = position.coords.latitude;
+      console.log("Latitude: ",lat);
+      console.log("Longitude: ",lon);
+      this.onAutoLoacation(lon,lat);
 }
 
   onType(city:string){
@@ -85,6 +104,20 @@ ngOnInit() {
     .subscribe(data => {this.weatherForeCastData = data;console.log(data)},
                error =>  this.errorMessage = <any>error,
              );
+
+  }
+
+  onAutoLoacation(lon:any,lat:any){
+
+    this._wService.getWeatherByCoards(lon,lat)
+    .subscribe(data => {this.weatherData = data;console.log(data)},
+               error =>  this.errorMessage = <any>error,
+             );
+
+    this._wService.getWeatherForecastByCoards(lon,lat)
+      .subscribe(data => {this.weatherForeCastData = data;console.log(data)},
+                        error =>  this.errorMessage = <any>error,
+                      );
 
   }
   getDateTime(timeinMS:number){
