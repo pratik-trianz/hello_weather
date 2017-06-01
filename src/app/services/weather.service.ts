@@ -35,6 +35,17 @@ export class WeatherService {
     .catch(this.handleExcep);
   }
 
+  getWeatherByCoards(lon:any,lat:any): Observable<any[]>{
+    return this.http.get(this.baseUrl+'weather?lat='+ lat +'&lon='+ lon +'&appid='+ APPID +'&units=metric')
+    .map(response => response.json())
+    .catch(this.handleExcep);
+  }
+
+  getWeatherForecastByCoards(lon:any,lat:any): Observable<any[]>{
+    return this.http.get(this.baseUrl+'forecast?lat='+ lat +'&lon='+lon+'&appid='+ APPID +'&units=metric')
+    .map(response => this.listData(response))
+    .catch(this.handleExcep);
+  }
   getWeatherForecast(city:string): Observable<any[]>{
     return this.http.get(this.baseUrl+'forecast?q='+ city +'&appid='+ APPID +'&units=metric')
     .map(response => this.listData(response))
